@@ -21,6 +21,8 @@ public class task1 {
                 System.out.print(arr[current]);
                 current = (current + m - 1) % n;
             } while (current != 0);
+        }else{
+            System.out.println("Введите значения n>=1 и m>=1");
         }
     }
 }
