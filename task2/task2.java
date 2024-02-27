@@ -22,7 +22,8 @@ public class task2 {
 
             File pointsFile = new File(pointsFilename);
             Scanner pointsScanner = new Scanner(pointsFile);
-            while (pointsScanner.hasNextDouble()) {
+            int pointCount = 0;
+            while (pointsScanner.hasNextDouble() && pointCount < 100) {
                 double xPoint = pointsScanner.nextDouble();
                 double yPoint = pointsScanner.nextDouble();
                 double distance = Math.sqrt(Math.pow((xCenter - xPoint), 2) + Math.pow((yCenter - yPoint), 2));
@@ -33,6 +34,10 @@ public class task2 {
                 } else {
                     System.out.println(2);
                 }
+                pointCount++;
+            }
+            if (pointCount == 0) {
+                System.out.println("Файл с координатами точек пуст");
             }
             pointsScanner.close();
         } catch (FileNotFoundException e) {
