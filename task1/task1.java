@@ -9,8 +9,11 @@ public class task1 {
 
         if (n >=1 && m>=1){
             if(n>1 && m==1){
-                System.out.println("Введите другие значения");
-                return;
+                int a = 1;
+                while(a<=n){
+                    System.out.print(a);
+                    a++;
+                }return;
             }
 
             int[] arr = new int[n];
